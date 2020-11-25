@@ -1,0 +1,65 @@
+{{ define "main" }}
+
+    <div class="container">
+        <h1>{{ .Title }}</h1>
+        <div class="row">
+          <div class="col-md-8">
+            <div class="meta">
+              <span class="meta"><small> Category : Hello  | Dibuat : 02 Januari 2020 </small></span>
+            </div>
+            {{ if isset .Params "featured_image" }}
+            <img src="{{ .Params.featured_image}}" class="img-fluid cropped3" alt="{{ .Title}}">
+            {{end}}
+            {{ partial "share-buttons.html" . }}
+            <p>{{ .Content }}</p>
+            {{ partial "share-buttons.html" . }}
+            <br>
+          <!-- Comment -->
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Leave Comment</h5>
+              <p class="card-text">{{ template "_internal/disqus.html" . }}</p>
+            </div>
+          </div>
+        </div>
+        <!-- Sidebar -->
+         <div class="col-md-4">
+          <div class="row">
+            <div class="col">
+              <aside>
+                {{ partial "recent-post.html" . }}
+              </aside>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <aside>
+                {{ partial "ads.html" . }}  
+              </aside>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <aside>
+                {{ partial "form.html" . }}
+              </aside>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="row justify-content-between">
+          <div class="col-sm-4 text-sm-left">
+            {{ with .PrevInSection }}
+            <a class="previous btn btn-dark bg-dark" href="{{.Permalink}}"> {{.Title | safeHTML | truncate 20 }}</a>
+          {{ end }}
+          </div>
+          <div class="col-sm-4 text-sm-right">
+            {{ with .NextInSection }}
+            <a class="next btn btn-dark bg-dark" href="{{.Permalink}}"> {{.Title | safeHTML | truncate 20 }}</a>
+          {{ end }}
+          </div>
+        </div>
+      </div>
+  </div>
+{{end}}

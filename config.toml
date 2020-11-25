@@ -1,0 +1,8 @@
+baseURL = "http://example.org/"
+languageCode = "en-us"
+title = "Kontempo"
+theme = "kontempo"
+summaryLength = 15
+
+[author]
+  name = "Igna Tamami"

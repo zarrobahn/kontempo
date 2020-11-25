@@ -1,0 +1,93 @@
+/*-- my style --*/
+html,
+body {
+    height: 100%;
+    font: arial, verdana, sans-serif;
+}
+.content {
+    margin-top: 20px;
+}
+nav .navbar-brand {
+    font-style: italic;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+nav .navbar-nav {
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.link-homepage {
+    color: coral;
+}
+.link-homepage:hover {
+    text-decoration: none;
+    color: coral;
+}
+
+.breadcrumbs {
+    color: coral;
+}
+
+.breadcrumbs a {
+    color: coral;
+}
+
+.breadcrumbs a:hover {
+    text-decoration: none;
+}
+
+.container {
+    max-width: 960px;
+}
+.list-page .card-title a {
+    color: coral;
+}
+.list-page .card-title a:hover {
+    text-decoration: none;
+    color: coral;
+}
+
+aside {
+    padding: 1em 0 0 0;
+} 
+
+.justify-content-between {
+    padding: 1vh 0 1vh 0;
+}
+footer {
+    padding: 10px;
+}
+
+footer .copy {
+    color: aliceblue;
+}
+
+
+@media (max-width: 575.98px) { 
+    h1 {
+        font-size: 26px;
+    }
+    h2 {
+        font-size: 22px;
+    }
+    h3 {
+        font-size: 18px;
+    }
+    h4 {
+        font-size: 17px;
+    }
+    h5 {
+        font-size: 15px;
+    }
+
+    .justify-content-between .text-sm-left {
+        padding-bottom: 5px;
+        position: relative;
+    }
+    .justify-content-between .text-sm-right {
+        padding-bottom: 5px;
+        position: relative;
+    }
+}

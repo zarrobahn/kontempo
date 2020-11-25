@@ -1,0 +1,24 @@
+{{ define "main" }}
+<div class="container list-page">
+    <h2>{{ .Title }}</h2>
+    <p>{{ .Summary }}</p>
+    {{ range .Pages }}
+    <div class="card mb-3">
+        <div class="row no-gutters">
+            {{ if isset .Params "featured_image" }}
+            <div class="col-md-4">
+                <img src="{{ .Params.featured_image}}" class="card-img" height="200px" alt="{{ .Title}}">
+            </div>
+            {{end}}
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title"><a href="{{.Permalink}}">{{.Title | safeHTML | truncate 50}}</a></h5>
+              <p class="card-text">{{ .Summary }}</p>
+              <p class="card-text"><small class="text-muted"> Category : Hello  | Posting : {{.Date.Format "02 January 2006"}}</small></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      {{end}}
+</div>
+{{end}}
