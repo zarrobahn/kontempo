@@ -3,7 +3,7 @@
     <div class="card-body">
         <ul class="list-group list-group-flush">
                 {{ range first 5 (where site.RegularPages "Type" "in" site.Params.mainSections) }}
-                <li class="list-group-item"><a class="link-homepage" href="{{ .Permalink }}">{{ .Title | safeHTML | truncate 30 }}</a></li>
+                <li class="list-group-item"><a class="link-homepage" href="{{ .Permalink }}">{{ humanize .Title | safeHTML | truncate 25 }}</a></li>
                 {{ end }}
         </ul>
     </div>

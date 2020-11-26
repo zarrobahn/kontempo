@@ -1,5 +1,4 @@
 {{ define "main" }}
-
     <div class="container">
         <h1>{{ .Title }}</h1>
         <div class="row">
@@ -8,7 +7,7 @@
               <span class="meta"><small> Category : Hello  | Dibuat : 02 Januari 2020 </small></span>
             </div>
             {{ if isset .Params "featured_image" }}
-            <img src="{{ .Params.featured_image}}" class="img-fluid cropped3" alt="{{ .Title}}">
+            <img src="{{ .Params.featured_image}}" class="img-fluid" alt="{{ .Title}}">
             {{end}}
             {{ partial "share-buttons.html" . }}
             <p>{{ .Content }}</p>
