@@ -1,4 +1,4 @@
-baseURL = "https://kontempo.netlify.app/"
+baseURL = "kontempo.netlify.app"
 languageCode = "en-us"
 title = "Kontempo"
 theme = "kontempo"
